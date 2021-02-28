@@ -10,9 +10,9 @@ class RangeSliderView extends StatefulWidget {
   _RangeSliderViewState createState() => _RangeSliderViewState();
 }
 
+
 class _RangeSliderViewState extends State<RangeSliderView> {
   RangeValues _values;
-
   @override
   void initState() {
     _values = widget.values;
@@ -118,7 +118,10 @@ class CustomRangeThumbShape extends RangeSliderThumbShape {
     @required SliderThemeData sliderTheme,
     TextDirection textDirection,
     Thumb thumb,
-  }) {
+        bool isPressed,
+
+
+      }) {
     final Canvas canvas = context.canvas;
     final ColorTween colorTween = ColorTween(
       begin: sliderTheme.disabledThumbColor,
